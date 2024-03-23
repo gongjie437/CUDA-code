@@ -14,7 +14,7 @@ int main(void)
 {
     hello_from_gpu<<<2, 4>>>();
     cudaDeviceSynchronize();
-
+//if we don't addd this synchronize, the CPU will not wait for the cuda task and execute the remaining cpu code and run away. 
     return 0;
 }
 
