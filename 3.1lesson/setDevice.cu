@@ -19,7 +19,7 @@ int main(void)
     
     // 设置执行
     int iDev = 0;
-    error = cudaSetDevice(iDev);
+    error = cudaSetDevice(iDev); //export cuda_visible_device, env 
     if (error != cudaSuccess)
     {
         printf("fail to set GPU 0 for computing.\n");
